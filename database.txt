@@ -1,0 +1,17 @@
+create table servicio(id int primary key auto_increment, nom_servicio varchar(35) not null);
+insert into servicio(nom_servicio) values("LIMPIEZA");
+insert into servicio(nom_servicio) values("BRACKETS");
+insert into servicio(nom_servicio) values("ENDODONCIA");
+insert into servicio(nom_servicio) values("INCRUSTACIONES");
+insert into servicio(nom_servicio) values("AMALGAMAS");
+create table material(id int primary key auto_increment, nom_herramienta varchar(35) not null);
+insert into material(nom_herramienta) values("OXIDO DE SINC");
+insert into material(nom_herramienta) values("UTAPERCHAS");
+insert into material(nom_herramienta) values("RECINA");
+insert into material(nom_herramienta) values("CERAMICASILCO");
+create table cita(id int primary key auto_increment,nom_paciente varchar(35),
+telefono varchar(13), email varchar(45),fecha_cita datetime
+
+)
+
+
