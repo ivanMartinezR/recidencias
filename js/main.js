@@ -40,7 +40,7 @@ $(document).ready(function() {
 
       $( function() {
         $( "#datepicker" ).datepicker();
-        $('#datetimepicker1').datetimepicker();
+        
         
       } );                  
 

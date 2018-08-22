@@ -1,0 +1,13 @@
+.numHora:hover{
+	background-color: red;
+	padding: 6px;
+    border-radius: 13px;
+    cursor: pointer;
+    font-family: Impact, Charcoal, sans-serif;
+
+}
+
+.numHora{
+	padding: 6px;
+	font-family: Impact, Charcoal, sans-serif;	
+}
