@@ -1,4 +1,5 @@
 <?php
+  $link=null;
   function conectar(){
      $host="localhost";
      $usu="root";
