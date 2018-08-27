@@ -31,7 +31,7 @@
 			<link rel="stylesheet" href="css/main.css">
 			<link rel="stylesheet" href="css/estilosMios.css">
 		</head>
-		<body>	
+		<body onload="Load()">	
 			  <header id="header" id="home">
 		  		<div class="header-top">
 		  			<div class="container">
@@ -41,7 +41,7 @@
 				  			</div>
 				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
 								<a class="btns" href="tel:+953 012 3654 896">+953 012 3654 896</a>
-				  				<a class="btns" href="mailto:support@colorlib.com">support@colorlib.com</a>		
+				  				<a class="btns" href="mailto:support@colorlib.com">Administrador</a>		
 				  				<a class="icons" href="tel:+953 012 3654 896">
 				  					<span class="lnr lnr-phone-handset"></span>
 				  				</a>
@@ -57,7 +57,7 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
+				          <li><a href="about.html">Citas</a></li>
 				          <li><a href="services.html">Services</a></li>
 				          <li><a href="opening-hour.html">Opening Hour </a></li>
 				          <li class="menu-has-children"><a href="">Blog</a>
@@ -94,9 +94,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								About Us				
+								Administrador (citas)			
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
+							
 						</div>	
 					</div>
 				</div>
@@ -109,8 +109,8 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Features that make us unique</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<h1 class="mb-10">Menú de Citas</h1>
+								<p>Funciones que puedes realizar.</p>
 							</div>
 						</div>
 					</div>							
@@ -123,11 +123,25 @@
 								<div class="details">
 									<h4 ><a href="#nuevaCita">Nueva Cita</a></h4>
 									<p>
-										inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+										En este formulario, se registran las nuevas citas. 
 									</p>
 								</div>
 							</div>
 						</div>
+						<div class="col-lg-6">
+							<div class="single-feature d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-magnifier"></span>
+								</div>
+								<div class="details">
+									<h4><a href="#verCitas">Ver Citas</a></h4>
+									<p>
+										En este apartado, usted puede visualizar las citas registradas y buscarlas por fechas.
+									</p>
+								</div>
+							</div>
+						</div>
+<!--												
 						<div class="col-lg-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
@@ -141,19 +155,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
-							<div class="single-feature d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-chart-bars"></span>
-								</div>
-								<div class="details">
-									<h4>X-Ray Service</h4>
-									<p>
-										inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-									</p>
-								</div>
-							</div>
-						</div>												
 						<div class="col-lg-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
@@ -192,44 +193,30 @@
 									</p>
 								</div>
 							</div>
-						</div>							
+						</div>	
+-->						
 					</div>
 				</div>	
 			</section>
+
+
 			<!-- End feature Area -->
 
 			<!-- Start home-about Area -->
-			<section class="home-about-area section-gap relative">			
+			<section   id="verCitas"  class="home-about-area section-gap relative">			
 				<div class="container">
 					<div class="row align-items-center justify-content-end">
 						<div class="col-lg-6 no-padding home-about-right">
 							<h1 class="text-white">
-								Who we are <br>
-								to Serve the nation
+								Listado de Citas 🗒
 							</h1>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-							</p>
-							<div class="row no-gutters">
-								<div class="single-services col">
-									<span class="lnr lnr-diamond"></span>
-									<a href="#">
-										<h4 class="text-white">Expert Services</h4>
-									</a>
-									<p>
-										Usage of the Internet is becoming more common due to rapid advancement of technology.
-									</p>
-								</div>
-								<div class="single-services col">
-									<span class="lnr lnr-phone"></span>
-									<a href="#">
-										<h4 class="text-white">Great Support</h4>
-									</a>
-									<p>
-										Usage of the Internet is becoming more common due to rapid advancement of technology.
-									</p>
-								</div>								
+							<h4 class="text-white">
+								<a id="modalBuscaFechaCita" data-toggle="modal" data-target="#modalBuscaPorFecha" href="#">Buscar por fechas 🗓</a>
+							</h4>
+							<div id="listaCitas" class="container">
+								
 							</div>
+					
 						</div>
 					</div>
 				</div>	
@@ -237,6 +224,9 @@
 			<!-- End home-about Area -->	
 			
 			<!-- Start team Area -->
+		    <section class="team-area section-gap" id="team">
+		        <div class="container">
+		           <!--
 		    <section class="team-area section-gap" id="team">
 		        <div class="container">
 		            <div class="row d-flex justify-content-center">
@@ -295,6 +285,9 @@
 		            </div>
 		        </div>
 		    </section>
+		           -->
+		        </div>
+		    </section>
 		    <!-- End team Area -->	
 
 			<!-- Start appoinment Area -->
@@ -323,24 +316,27 @@
 		                            <div class="col-lg-2 d-flex flex-column">
 		                                <div class="icon">
 									         <span style="
-									         top: 28px;
+									         top: 30px;
                                              position: relative;
                                              font-size: 25px;
                                                  left: 25px;" class="lnr lnr-clock"></span>
 								        </div>
 		                            </div>		                            
 		                            <div class="col-lg-2 d-flex flex-column">
-		                                <input name="appoinment-date"  class="form-control mt-20" required type="text" id="hora" readonly >
+		                                <input name="appoinment-date"  class="form-control mt-20" required type="text" id="hora" value="13" readonly >
 		                            </div>
 		                            <div class="col-lg-2 d-flex flex-column">
-		                                <input name="minn" class="form-control mt-20" require  type="text" id="minutos" readonly>
+		                                <input name="minn" class="form-control mt-20" require  type="text" id="minutos" value="00" readonly>
 		                            </div>
 		                            <div class="col-lg-12 flex-column">
-		                                <textarea  rows="5" class="form-control mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+		                                
+		                                <select style=" background-color: #212529; padding: 8px; color: #fff;" class="form-control mt-20" name="servicio" id="cmbServicio">
+		                                	
+		                                </select>
 		                            </div>
 
 		                            <div class="col-lg-12 d-flex justify-content-end send-btn">
-		                                <button id="btnGuardarCita" type="button" class="genric-btn primary mt-20 text-uppercase ">Confirm booking</button>
+		                                <button id="btnGuardarCita" type="button" class="genric-btn primary mt-20 text-uppercase ">Hacer Cita 👩</button>
 		                            </div>
 
 		                            <div class="alert-msg"></div>
@@ -355,115 +351,73 @@
 			<!-- Start testomial Area -->
 			<section class="testomial-area section-gap">
 				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Feedback from our real clients</h1>
-								<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="active-testimonial-carusel">
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t1.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t2.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t3.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>	
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t1.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t2.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t3.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>															
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t1.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t2.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>
-							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/t3.png" alt="">
-								<p class="desc">
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory
-								</p>
-								<h4>Mark Alviro Wiens</h4>
-								<p>
-									CEO at Google
-								</p>
-							</div>														
-						</div>
-					</div>
+					<!--
+							    <section class="team-area section-gap" id="team">
+		        <div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-70 col-lg-8">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">Our Consultants</h1>
+		                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="row justify-content-center d-flex align-items-center">
+		                <div class="col-lg-3 col-md-6 single-team">
+		                    <div class="thumb">
+		                        <img class="img-fluid" src="img/t1.jpg" alt="">
+		                        <div class="align-items-end justify-content-center d-flex">
+		                            <p>
+		                            	inappropriate behavior
+		                            </p>
+		                            <h4>Andy Florence</h4>		                            
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-lg-3 col-md-6 single-team">
+		                    <div class="thumb">
+		                        <img class="img-fluid" src="img/t2.jpg" alt="">
+		                        <div class="align-items-end justify-content-center d-flex">
+		                            <p>
+		                            	inappropriate behavior
+		                            </p>
+		                            <h4>Andy Florence</h4>		                            
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-lg-3 col-md-6 single-team">
+		                    <div class="thumb">
+		                        <img class="img-fluid" src="img/t3.jpg" alt="">
+		                        <div class="align-items-end justify-content-center d-flex">
+		                            <p>
+		                            	inappropriate behavior
+		                            </p>
+		                            <h4>Andy Florence</h4>		                            
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-lg-3 col-md-6 single-team">
+		                    <div class="thumb">
+		                        <img class="img-fluid" src="img/t4.jpg" alt="">
+		                        <div class="align-items-end justify-content-center d-flex">
+		                            <p>
+		                            	inappropriate behavior
+		                            </p>
+		                            <h4>Andy Florence</h4>		                            
+		                        </div>
+		                    </div>
+		                </div>		                		                		                
+		            </div>
+		        </div>
+		    </section>
+					-->
 				</div>	
 			</section>
 			<!-- End testomial Area -->						    														<button id="modalHoras" style="display: none;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
 
-<!-- Modal -->
+<!-- Modal 111111111111111111111111111111111111111-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -479,8 +433,35 @@
 
     </div>
   </div>
+
+</div>
+
+<!-- Modal 222222222222222222222222222222-->
+<div class="modal fade" id="modalBuscaPorFecha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="FechasEnModal" class="modal-body">
+        <label class="form-group">Fecha Inicial:</label>
+        <input class="form-group" type="date" name="fechaIniBuscarCita"/>
+        <br/>
+        <label class="form-group">Fecha Final:</label>
+        <input class="form-group" type="date" name="fechaFinBuscarCita"/>
+      </div>
+      <div class="modal-footer">
+        <button id="btnCierraModalFechas" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="btnBuscarPorFecha" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>					
-			<!-- start footer Area -->		
+			<!-- start footer Area -->	
+		<!--	
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
@@ -531,19 +512,12 @@
 						</div>					
 					</div>
 
-					<div class="row footer-bottom d-flex justify-content-between">
-						<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						<div class="col-lg-4 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
+
 				</div>
-			</footer>
+			</footer> 
+
+
+		-->
 			<!-- End footer Area -->
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

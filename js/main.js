@@ -40,7 +40,7 @@ $(document).ready(function() {
 
       $( function() {
         $( "#datepicker" ).datepicker();
-        
+        $( "#fecIni" ).datepicker();       
         
       } );                  
 

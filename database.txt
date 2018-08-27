@@ -10,8 +10,9 @@ insert into material(nom_herramienta) values("UTAPERCHAS");
 insert into material(nom_herramienta) values("RECINA");
 insert into material(nom_herramienta) values("CERAMICASILCO");
 create table cita(id int primary key auto_increment,nom_paciente varchar(35),
-telefono varchar(13), email varchar(45),fecha_cita datetime
+telefono varchar(13), email varchar(45),fecha_cita datetime,id_servicio int
 
 )
 
 
+cons 1 dr esquilvel 

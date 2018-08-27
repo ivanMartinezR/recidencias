@@ -11,3 +11,7 @@
 	padding: 6px;
 	font-family: Impact, Charcoal, sans-serif;	
 }
+
+#listaCitas div.row:hover{
+	background-color: #00ff81;
+}
