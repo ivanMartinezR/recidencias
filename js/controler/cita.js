@@ -53,8 +53,8 @@
     $.post("php/cita.php",
     {
         accion: "GET_CITAS",
-        fechaIni:fecha.getFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDate(),
-        fechaFin:fecha.getFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDate(),
+        fechaIni:fecha.getFullYear()+"-"+(fecha.getMonth()+1)+"-"+fecha.getDate(),
+        fechaFin:fecha.getFullYear()+"-"+(fecha.getMonth()+1)+"-"+fecha.getDate(),
     },
     function(data, status){
 

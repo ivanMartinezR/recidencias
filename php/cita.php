@@ -59,7 +59,8 @@ if($_POST["accion"]=="GET_SERVICIOS"){
 
 if($_POST["accion"]=="GET_CITAS"){
 
-    $query="select nom_paciente,fecha_cita,s.nom_servicio from cita as c join servicio as s on c.id_servicio=s.id where date(fecha_cita)>='".$_POST["fechaIni"]."' and date(fecha_cita)<='".$_POST["fechaFin"]."'";
+
+    $query="select nom_paciente,fecha_cita,s.nom_servicio from cita as c join servicio as s on c.id_servicio=s.id where date(fecha_cita)>='".date('Y-m-d',strtotime($_POST["fechaIni"]))."' and date(fecha_cita)<='".date('Y-m-d',strtotime($_POST["fechaFin"]))."'";
 	$salida="<div id='cabeceroCitas' style='background-color:#00e4ff;' class='row'>
 					  <div class='col'>Paciente</div>
 					  <div class='col'>Fecha</div>
